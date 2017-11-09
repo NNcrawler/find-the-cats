@@ -18,14 +18,17 @@
 
       <div class="phone-viewport">
         <md-list>
+          <router-link :to="{ name: 'Home' }">
           <md-list-item @click.native="toggleSideNavLeft('/')">
             <md-icon>home</md-icon>
             <span>Home</span>
           </md-list-item>
-          <md-list-item @click.native="toggleSideNavLeft('/post')">
+          </router-link>
+          <router-link :to="{ name: 'Post' }"><md-list-item @click.native="toggleSideNavLeft('/post')">
             <md-icon>add</md-icon>
             <span>New Post</span>
           </md-list-item>
+          </router-link>
         </md-list>
       </div>
     </md-sidenav>
